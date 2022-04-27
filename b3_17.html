@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Apple{
+        weight
+        constructor(weight) {
+            this.weight=weight;
+            this.decrease = function (){
+                return this.weight--
+            }
+            this.isEmpty= function (){
+                return false;
+            }
+            this.getWeight = function (){
+                return this.weight;
+            }
+        }
+    }
+    class Human{
+        name;
+        gender;
+        weight;
+        constructor(name,gender,weight){
+            this.name= name;
+            this.gender=gender;
+            this.weight=weight
+            this.genderDeter = function (){
+                if (gender==='nam')
+                    return true
+                else
+                    return false;
+            }
+            this.sayStr= function (str){
+                  console.log(str)
+            }
+            this.checkApple = function (Apple){
+                if(Apple.weight>0){
+                    return true
+                }
+                else{
+                    return false;
+                }
+            }
+            this.eatApple = function (Apple){
+                console.log(--Apple.weight)
+                console.log(++this.weight)
+            }
+            this.getName = function (){
+                return this.name
+            }
+            this.setName = function (name){
+                this.name= name
+            }
+            this.getWeight= function (){
+                return this.weight;
+            }
+            this.setWeight = function (weight){
+                this.weight =weight
+            }
+        }
+    }
+    let apple = new Apple(10)
+    let human = new Human('Adam','nam',28)
+    console.log(apple.weight)
+    console.log('Can nang ban dau cua Adam:'+human.getWeight());
+     console.log(apple.decrease());
+    console.log('khoi luong qua tao:'+apple.getWeight())
+    console.log('Gioi tinh human :'+human.genderDeter())
+    console.log('check tao '+human.checkApple(apple))
+    human.sayStr('hello trai tao')
+    human.eatApple(apple)
+    console.log(human.getName());
+    console.log('Can nang sau khi awn tao:'+human.getWeight());
+</script>
